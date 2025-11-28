@@ -1,0 +1,10 @@
+# Web Framework
+Flask==2.3.3
+
+# Fake Data Generation  
+Faker==19.3.1
+
+# Password Security
+Werkzeug==2.3.7
+
+# Note: sqlite3, os, functools, and random are Python standard library modules

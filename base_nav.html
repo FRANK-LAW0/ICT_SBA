@@ -1,0 +1,24 @@
+<header>
+  <nav class="nav-bar">
+    <a href="{{ url_for('index') }}" class="logo">
+      <i class="fas fa-trophy"></i> SportsDay
+    </a>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-label="Menu">
+      <span class="hamburger">☰</span>
+      <span class="close-icon hidden">×</span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="{{ url_for('list_results') }}"><i class="fas fa-list"></i> Results</a></li>
+      {% if session.role=='admin' %}
+      <li><a href="{{ url_for('list_athletes') }}"><i class="fas fa-users"></i> Athletes</a></li>
+      {% endif %}
+      <li><a href="{{ url_for('list_events') }}"><i class="fas fa-calendar"></i> Events</a></li>
+      {% if session.role=='admin' %}
+      <li><a href="{{ url_for('add_result') }}"><i class="fas fa-plus"></i> Add Result</a></li>
+      {% endif %}
+      <li><a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<script src="{{ url_for('static', filename='nav.js') }}"></script>
