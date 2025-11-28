@@ -3,7 +3,7 @@ This is a web application for inputting, managing, reading and tracing sports da
 
 ## Features
 
-### Authentication adn Data Security
+### Authentication and Data Security
 - Two roles (Admin, User) with different permissions
 
 | Feature | Admin | User |
