@@ -311,6 +311,7 @@ def edit_event(event_id):
 # show athletes table
 @app.route('/athletes')
 @login_required
+@admin_required
 def list_athletes():
     # filter function
     athlete_id = request.args.get('athlete_id', '').strip()
